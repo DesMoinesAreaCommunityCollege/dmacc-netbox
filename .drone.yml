@@ -1,14 +1,14 @@
 ---
 kind: secret
-name: r3_username
+name: azure_username
 get:
-  path: r3
+  path: azure-docker-push
   name: username
 ---
 kind: secret
-name: r3_password
+name: azure_password
 get:
-  path: r3
+  path: azure-docker-push
   name: password
 ---
 kind: pipeline
@@ -19,12 +19,12 @@ steps:
     image: plugins/kaniko
     pull: always
     settings:
-      repo: r3.ocj.io/network/netbox
-      registry: r3.ocj.io
+      repo: dmaccregistry01.azurecr.io/network/netbox
+      registry: dmaccregistry01.azurecr.io
       username:
-        from_secret: r3_username
+        from_secret: azure_username
       password:
-        from_secret: r3_password
+        from_secret: azure_password
       tags:
         - "latest"
         - "${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA:0:8}"

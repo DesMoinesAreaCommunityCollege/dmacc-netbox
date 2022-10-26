@@ -1,0 +1,34 @@
+---
+kind: secret
+name: r3_username
+get:
+  path: r3
+  name: username
+---
+kind: secret
+name: r3_password
+get:
+  path: r3
+  name: password
+---
+kind: pipeline
+type: kubernetes
+name: publish
+steps:
+  - name: publish
+    image: plugins/kaniko
+    pull: always
+    settings:
+      repo: r3.ocj.io/network/netbox
+      registry: r3.ocj.io
+      username:
+        from_secret: r3_username
+      password:
+        from_secret: r3_password
+      tags:
+        - "latest"
+        - "${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA:0:8}"
+  # - name: notify flux
+  #   image: plugins/webhook
+  #   settings:
+  #     urls: http://webhook-receiver.flux-system.svc/hook/422ca801500a638f2dd6fa5d174f7b1e12d2bd037b1d869451d6434bf61656f2

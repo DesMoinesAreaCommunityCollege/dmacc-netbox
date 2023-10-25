@@ -1,14 +1,14 @@
 ---
 kind: secret
-name: azure_username
+name: username
 get:
-  path: azure-docker-push
+  path: docker-push
   name: username
 ---
 kind: secret
-name: azure_password
+name: password
 get:
-  path: azure-docker-push
+  path: docker-push
   name: password
 ---
 kind: pipeline
@@ -22,9 +22,9 @@ steps:
       repo: dmaccregistry01.azurecr.io/network/netbox
       registry: dmaccregistry01.azurecr.io
       username:
-        from_secret: azure_username
+        from_secret: username
       password:
-        from_secret: azure_password
+        from_secret: password
       tags:
         - "latest"
         - "${DRONE_BUILD_NUMBER}-${DRONE_COMMIT_SHA:0:8}"

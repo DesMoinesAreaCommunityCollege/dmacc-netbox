@@ -1,8 +1,6 @@
 FROM docker.io/netboxcommunity/netbox:v3.6.4-2.7.0
 
-# RUN apt-get update && apt-get -y install git
-
-# COPY ./plugin_requirements.txt /
+COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /opt/netbox/venv/bin/pip install --no-cache-dir --no-warn-script-location \

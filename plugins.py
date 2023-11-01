@@ -1,6 +1,6 @@
 """Configure Netbox plugins."""
 
-PLUGINS = ["netbox_dns", "netbox_documents"]
+PLUGINS = ["netbox_dns", "netbox_documents", "netbox_webhook_receiver"]
 
 PLUGINS_CONFIG = {
     "netbox_documents": {

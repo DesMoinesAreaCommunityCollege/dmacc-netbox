@@ -1,10 +1,10 @@
-FROM docker.io/netboxcommunity/netbox:v3.6.4-2.7.0
+FROM docker.io/netboxcommunity/netbox:v3.6.5-2.7.0
 
 COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /opt/netbox/venv/bin/pip install --no-cache-dir --no-warn-script-location \
-    netbox-plugin-dns==0.20.2 \
+    netbox-plugin-dns==0.21.0 \
     netbox-documents==0.6.0 \
     netbox-plugin-webhook-receiver==0.2.0
 

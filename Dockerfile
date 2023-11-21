@@ -5,7 +5,7 @@ COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /opt/netbox/venv/bin/pip install --no-cache-dir --no-warn-script-location \
     netbox-plugin-dns==0.21.3 \
-    netbox-documents==0.6.2 \
+    netbox-documents==0.6.3 \
     netbox-plugin-webhook-receiver==0.2.0
 
 RUN SECRET_KEY="dummydummydummydummydummydummydummydummydummydummy" /opt/netbox/venv/bin/python /opt/netbox/netbox/manage.py collectstatic --no-input

@@ -1,6 +1,11 @@
 """Configure Netbox plugins."""
 
-PLUGINS = ["netbox_dns", "netbox_documents", "netbox_webhook_receiver"]
+PLUGINS = [
+    "netbox_dns",
+    "netbox_documents",
+    "netbox_webhook_receiver",
+    "netbox_prometheus_sd",
+]
 
 PLUGINS_CONFIG = {
     "netbox_documents": {

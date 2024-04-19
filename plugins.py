@@ -3,8 +3,9 @@
 PLUGINS = [
     "netbox_dns",
     "netbox_documents",
-    "netbox_webhook_receiver",
-    "netbox_prometheus_sd",
+    "netbox_topology_views",
+    # "netbox_webhook_receiver",
+    # "netbox_prometheus_sd",
 ]
 
 PLUGINS_CONFIG = {

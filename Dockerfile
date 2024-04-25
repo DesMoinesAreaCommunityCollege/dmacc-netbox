@@ -1,4 +1,4 @@
-FROM docker.io/netboxcommunity/netbox:v3.7.5-2.8.0
+FROM docker.io/netboxcommunity/netbox:v3.7.6-2.8.0
 
 COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py

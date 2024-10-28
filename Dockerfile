@@ -4,7 +4,7 @@ COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /opt/netbox/venv/bin/pip install --no-cache-dir --no-warn-script-location \
-    netbox-plugin-dns==1.1.4 \
+    netbox-plugin-dns==1.1.5 \
     netbox-documents==0.7.0 \
     netbox-reorder-rack==1.1.3
     # netbox-topology-views==3.9.1

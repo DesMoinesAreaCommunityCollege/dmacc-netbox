@@ -8,6 +8,7 @@ jobs:
       
       - uses: docker/login-action@v3
         with:
+          registry: ${{ secrets.FORGEJO_REGISTRY }}
           username: ${{ secrets.FORGEJO_USERNAME }}
           password: ${{ secrets.FORGEJO_PASSWORD }}
 

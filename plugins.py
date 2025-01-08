@@ -3,7 +3,7 @@
 PLUGINS = [
     "netbox_dns",
     "netbox_documents",
-    "netbox_reorder_rack",
+    # "netbox_reorder_rack",
     # "netbox_topology_views",
     # "netbox_webhook_receiver",
     # "netbox_prometheus_sd",

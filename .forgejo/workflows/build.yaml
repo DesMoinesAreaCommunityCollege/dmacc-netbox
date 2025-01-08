@@ -16,7 +16,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           push: true
-          tags:
-            - "${{ secrets.FORGEJO_REGISTRY }}/${{ secrets.FORGEJO_USERNAME }}/netbox:latest"
-            - "${{ secrets.FORGEJO_REGISTRY }}/${{ secrets.FORGEJO_USERNAME }}/netbox:${{ GITHUB_RUN_NUMBER }}"
+          tags: |
+            ${{ secrets.FORGEJO_REGISTRY }}/${{ secrets.FORGEJO_USERNAME }}/netbox:latest
+            ${{ secrets.FORGEJO_REGISTRY }}/${{ secrets.FORGEJO_USERNAME }}/netbox:${{ GITHUB_RUN_NUMBER }}
           

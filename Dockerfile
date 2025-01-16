@@ -7,8 +7,8 @@ RUN apt-get update
 RUN apt-get install -y git
 RUN /opt/netbox/venv/bin/pip install --no-cache-dir --no-warn-script-location \
     netbox-plugin-dns==1.2.0 \
-    git+https://github.com/jasonyates/netbox-documents.git@refs/pull/71/head
-    # netbox-documents==0.7.0 \
+    # git+https://github.com/jasonyates/netbox-documents.git@refs/pull/71/head
+    netbox-documents==0.7.1
     # netbox-reorder-rack==1.1.3
     # netbox-topology-views==3.9.1
     # netbox-plugin-webhook-receiver==0.2.0 \

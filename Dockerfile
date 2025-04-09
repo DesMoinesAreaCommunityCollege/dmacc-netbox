@@ -4,8 +4,8 @@ COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /usr/local/bin/uv pip install \
-    netbox-plugin-dns==1.2.6 \
-    netbox-documents==0.7.1
+    netbox-plugin-dns==1.2.7 \
+    netbox-documents==0.7.2
     # netbox-reorder-rack==1.1.3
     # netbox-topology-views==3.9.1
     # netbox-plugin-webhook-receiver==0.2.0 \

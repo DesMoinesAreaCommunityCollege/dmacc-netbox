@@ -1,10 +1,10 @@
-FROM docker.io/netboxcommunity/netbox:v4.2.9-3.2.1
+FROM docker.io/netboxcommunity/netbox:v4.3.0-3.3.0
 
 COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
 RUN /usr/local/bin/uv pip install \
-    netbox-plugin-dns==1.2.11 \
+    netbox-plugin-dns==1.3.0 \
     netbox-documents==0.7.2
     # netbox-reorder-rack==1.1.3
     # netbox-topology-views==3.9.1

@@ -2,7 +2,7 @@
 
 PLUGINS = [
     "netbox_dns",
-    # "netbox_documents",
+    "netbox_documents",
     # "netbox_reorder_rack",
     # "netbox_topology_views",
     # "netbox_webhook_receiver",

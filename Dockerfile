@@ -7,8 +7,8 @@ RUN apt-get update
 RUN apt-get install -y git
 RUN /usr/local/bin/uv pip install \
     netbox-plugin-dns==1.3.2 \
-    git+https://github.com/jasonyates/netbox-documents.git@refs/pull/75/head
-    # netbox-documents==0.7.2
+    netbox-documents==0.7.3
+    # git+https://github.com/jasonyates/netbox-documents.git@refs/pull/75/head
     # netbox-reorder-rack==1.1.3
     # netbox-topology-views==3.9.1
     # netbox-plugin-webhook-receiver==0.2.0 \

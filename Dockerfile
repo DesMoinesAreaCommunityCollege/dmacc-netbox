@@ -1,10 +1,10 @@
-FROM docker.io/netboxcommunity/netbox:v4.3.1-3.3.0
+FROM docker.io/netboxcommunity/netbox:v4.3.2-3.3.0
 
 COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
 
-RUN apt-get update
-RUN apt-get install -y git
+# RUN apt-get update
+# RUN apt-get install -y git
 RUN /usr/local/bin/uv pip install \
     netbox-plugin-dns==1.3.2 \
     netbox-documents==0.7.3

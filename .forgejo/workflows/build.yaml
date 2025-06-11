@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          podman build -t ${{ vars.FORGEJO_REGISTRY }}/${{ vars.FORGEJO_USERNAME }}/netbox:latest
+          podman build -t ${{ vars.FORGEJO_REGISTRY }}/${{ vars.FORGEJO_USERNAME }}/netbox:latest --output type=tar,dest=result .
       # - uses: docker/metadata-action@v5
       #   id: meta
       #   with:

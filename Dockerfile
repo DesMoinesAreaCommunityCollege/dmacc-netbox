@@ -6,8 +6,8 @@ COPY ./plugins.py /etc/netbox/config/plugins.py
 RUN apt-get update
 RUN apt-get install -y git
 RUN /usr/local/bin/uv pip install \
-    git+https://github.com/netboxlabs/netbox-custom-objects.git@1fd39e7a4518f1207fe02a430b5feccf55a2a06b \
-    netbox-plugin-dns==1.4.1 \
+    git+https://github.com/netboxlabs/netbox-custom-objects.git@v0.4.0 \
+    netbox-plugin-dns==1.4.2 \
     netbox-documents==0.7.4
     # git+https://github.com/jasonyates/netbox-documents.git@refs/pull/75/head
     # netbox-reorder-rack==1.1.3

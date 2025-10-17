@@ -1,7 +1,7 @@
 """Configure Netbox plugins."""
 
 PLUGINS = [
-    # "netbox_custom_objects",
+    "netbox_custom_objects",
     "netbox_dns",
     "netbox_documents",
     # "netbox_reorder_rack",

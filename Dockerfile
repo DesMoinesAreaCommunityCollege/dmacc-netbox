@@ -6,7 +6,7 @@ COPY ./plugins.py /etc/netbox/config/plugins.py
 # RUN apt-get update
 # RUN apt-get install -y git
 RUN /usr/local/bin/uv pip install \
-    netboxlabs-netbox-custom-objects==0.4.5 \
+    netboxlabs-netbox-custom-objects==0.4.6 \
     netbox-plugin-dns==1.5.1 \
     netbox-documents==0.7.4
 

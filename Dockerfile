@@ -8,7 +8,7 @@ COPY ./plugins.py /etc/netbox/config/plugins.py
 RUN /usr/local/bin/uv pip install \
     netboxlabs-netbox-custom-objects==0.4.6 \
     netbox-plugin-dns==1.5.2 \
-    netbox-documents==0.8.1
+    netbox-documents==0.8.2
 
     # git+https://github.com/netboxlabs/netbox-custom-objects.git@v0.4.4 \
     # git+https://github.com/jasonyates/netbox-documents.git@refs/pull/75/head

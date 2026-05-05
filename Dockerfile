@@ -1,4 +1,4 @@
-FROM docker.io/netboxcommunity/netbox:v4.5.10-4.0.2
+FROM docker.io/netboxcommunity/netbox:v4.6.0-5.0.0
 
 COPY ./nginx-unit.json /etc/unit/nginx-unit.json
 COPY ./plugins.py /etc/netbox/config/plugins.py
@@ -7,7 +7,7 @@ COPY ./plugins.py /etc/netbox/config/plugins.py
 # RUN apt-get install -y git
 RUN /usr/local/bin/uv pip install \
     netboxlabs-netbox-custom-objects==0.4.10 \
-    netbox-plugin-dns==1.5.7 \
+    netbox-plugin-dns==1.5.8 \
     netbox-documents==0.8.2
 
     # git+https://github.com/netboxlabs/netbox-custom-objects.git@v0.4.4 \
